@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.cursor {
+  width: 10px;
+  height: 20px;
+  background-color: greenyellow;
+  animation: blink 1s infinite;
+  position: relative;
+}
+
+.texter {
+  resize: none;
+  border: none;
+  /* background-color: aquamarine; */
+  height: 0;
+  width: 0;
+}
+
+.tran {
+  display: block;
+  animation: show 1s steps(30, end);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
